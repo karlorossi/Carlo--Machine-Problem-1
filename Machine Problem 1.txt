@@ -1,0 +1,133 @@
+Write a C++ program that will ask for the following input from the user:
+	Student Name:
+Program/Course:
+	Year Level: (should be integer type)
+	Number of Units Enrolled: (should be double or float data type)
+Determine the corresponding year name of the student and rate per unit as follows:
+	Year Level		Year Name		Rate Per Unit
+		1		Freshman		1,500
+		2		Sophomore		1,800
+		3		Junior			2,000
+	        4 or 5		Senior			2,300
+Compute the tuition fee as follows:
+	Tuition fee = no. of units enrolled X rate per unit
+	Down payment = 30% of the tuition fee
+	Balance = tuition fee – down payment
+Assume that the user will not enter an invalid value.
+
+Sample Input:
+	Student Name	: Maria Blanco
+	Program/Course	: Bachelor of Science in Information Technology
+	Year Level		: 4	
+	No. of Units		: 16
+	--------------------------------------------------------------------------------------------
+
+Sample Output:
+			ENROLLMENT SLIP
+	Student Name	: Maria Blanco
+	Program/Course	: Bachelor of Science in Information Technology
+	Year Name		: Senior	
+	No. of Units		: 16
+	Tuition Fee		: 36800
+	Down Payment	: 11040
+	Balance		: 25760
+
+
+#include <iostream>
+#include <string>
+using namespace std;
+
+double 
+freshman = 1500, sophomore = 1800, junior = 2000, senior = 2300, tuitionfee, balance, downpayment, downpaymentpercetage =  0.30;
+
+string
+name, course;
+
+int
+year, units;
+
+int main()
+{
+        cout << "Enter your name: ";
+        getline(cin,name);
+
+        cout << "Enter your course: ";
+        cin >> course;
+
+        cout << "Enter your Year-Level: ";
+        cin >> year;
+
+        cout << "Enter the number of units: ";
+        cin >> units;
+
+        switch(year)
+                {
+                    case 1:
+                        {
+                           tuitionfee = units *  freshman;
+                           downpayment = tuitionfee *  downpaymentpercetage;
+                           balance = tuitionfee - downpayment;
+
+                           cout << "\n\n       ENROLLMENT SLIP \n\n";
+                           cout << "Student Name  : " << name << "\n";
+                           cout << "Program/Course: " << course << "\n";
+                           cout << "Year Name     : Freshman\n";
+                           cout << "No. of Units  : " << units << "\n";
+                           cout << "Tuition Fee   : " << tuitionfee << "\n";
+                           cout << "Down Payment  : " << downpayment << "\n";
+                           cout << "Balance       : " << balance << "\n\n";
+                           break;
+                        }
+                    case 2:
+                        {
+                           tuitionfee = units *  sophomore;
+                           downpayment = tuitionfee *  downpaymentpercetage;
+                           balance = tuitionfee - downpayment;
+
+                           cout << "\n\n       ENROLLMENT SLIP \n\n";
+                           cout << "Student Name  : " << name << "\n";
+                           cout << "Program/Course: " << course << "\n";
+                           cout << "Year Name     : Sophomore\n";
+                           cout << "No. of Units  : " << units << "\n";
+                           cout << "Tuition Fee   : " << tuitionfee << "\n";
+                           cout << "Down Payment  : " << downpayment << "\n";
+                           cout << "Balance       : " << balance << "\n\n";
+                           break;
+                        }
+                    case 3:
+                        {
+                           tuitionfee = units *  junior;
+                           downpayment = tuitionfee *  downpaymentpercetage;
+                           balance = tuitionfee - downpayment;
+
+                           cout << "\n\n       ENROLLMENT SLIP \n\n";
+                           cout << "Student Name  : " << name << "\n";
+                           cout << "Program/Course: " << course << "\n";
+                           cout << "Year Name     : Junior\n";
+                           cout << "No. of Units  : " << units << "\n";
+                           cout << "Tuition Fee   : " << tuitionfee << "\n";
+                           cout << "Down Payment  : " << downpayment << "\n";
+                           cout << "Balance       : " << balance << "\n\n";
+                           break;
+                        }
+                    case 4:
+                        {
+                           tuitionfee = units *  senior;
+                           downpayment = tuitionfee *  downpaymentpercetage;
+                           balance = tuitionfee - downpayment;
+
+                           cout << "\n\n       ENROLLMENT SLIP \n\n";
+                           cout << "Student Name  : " << name << "\n";
+                           cout << "Program/Course: " << course << "\n";
+                           cout << "Year Name     : Senior\n";
+                           cout << "No. of Units  : " << units << "\n";
+                           cout << "Tuition Fee   : " << tuitionfee << "\n";
+                           cout << "Down Payment  : " << downpayment << "\n";
+                           cout << "Balance       : " << balance << "\n\n";
+                           break;
+                        }
+
+                }
+
+
+}
